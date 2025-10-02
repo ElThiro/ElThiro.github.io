@@ -84,3 +84,6 @@ header h1{
 .seccion {
   display: none; /* Oculta las secciones al cargar la página */
 }
+#inicio {
+  display: block;
+}
