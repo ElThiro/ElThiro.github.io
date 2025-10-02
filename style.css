@@ -81,9 +81,11 @@ header h1{
 .sidebar.active {
   left: 0;
 }
+
 .seccion {
-  display: none; /* Oculta las secciones al cargar la página */
+  display: none; /* Todas ocultas por defecto */
 }
+
 #inicio {
-  display: block;
+  display: block; /* Solo inicio visible al cargar */
 }
