@@ -11,3 +11,16 @@ window.addEventListener("click", (e) => {
     menu.classList.remove("show");
   }
 });
+// Ocultar todas las secciones al iniciar
+document.querySelectorAll(".seccion").forEach(s => s.style.display = "none");
+
+// Mostrar sección de proyectos al hacer clic en el menú
+document.querySelectorAll(".menu p").forEach(opcion => {
+  opcion.addEventListener("click", () => {
+    const seccion = opcion.getAttribute("data-section");
+    if(document.getElementById(seccion)) { // verifica que exista la sección
+      document.querySelectorAll(".seccion").forEach(s => s.style.display = "none");
+      document.getElementById(seccion).style.display = "block";
+    }
+  });
+});
