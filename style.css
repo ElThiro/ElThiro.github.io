@@ -1,0 +1,76 @@
+/* Fondo y tipografía */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #d8bfb2; /* Beige */
+  color: #0f2a3d; /* Azul oscuro para el título */
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Botón hamburguesa con 4 rayas */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* espacio entre rayas */
+  z-index: 1001;
+}
+
+.menu-btn span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  background: #800000; /* Granate */
+  border-radius: 2px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Oculta al inicio */
+  width: 250px;
+  height: 100%;
+  background: #111;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  color: #800000; /* Granate */
+}
+
+/* Sidebar activa */
+.sidebar.active {
+  left: 0;
+}
