@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  display: none;                  /* oculto por defecto */
+  background-color: #f9f9f9;      /* fondo claro en lugar de negro */
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 150px;
+  position: absolute;
+  top: 50px;                      /* ajusta según tu diseño */
+  left: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.menu.show {
+  display: block;                 /* se muestra al hacer clic */
+}
+
+.menu p {
+  margin: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu p:hover {
+  background-color: #e0e0e0;      /* efecto al pasar el mouse */
+}
