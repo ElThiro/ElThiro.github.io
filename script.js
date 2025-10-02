@@ -9,7 +9,7 @@ document.getElementById('enlace-proyectos').addEventListener('click', function(e
   e.preventDefault();
   document.getElementById('proyectos').style.display = 'block';
 });
-// Mostrar la sección de proyectos al hacer clic en el menú
+// Mostrar la sección de inicio al hacer clic en el menú
 document.getElementById('enlace-inicio').addEventListener('click', function(e) {
   e.preventDefault();
   document.getElementById('inicio').style.display = 'block';
