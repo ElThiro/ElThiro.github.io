@@ -74,3 +74,6 @@ header h1 {
 .sidebar.active {
   left: 0;
 }
+.seccion {
+  display: none; /* Oculta las secciones al cargar la página */
+}
