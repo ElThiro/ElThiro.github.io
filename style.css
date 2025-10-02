@@ -45,7 +45,7 @@ header h1 {
   left: -250px; /* Oculta al inicio */
   width: 250px;
   height: 100%;
-  background: #111;
+  background: #e0c097;
   padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 1000;
@@ -62,7 +62,7 @@ header h1 {
 }
 
 .sidebar ul li a {
-  color: #fff;
+  color: #0A1A72;
   text-decoration: none;
   font-size: 18px;
 }
