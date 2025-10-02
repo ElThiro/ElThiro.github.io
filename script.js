@@ -14,3 +14,21 @@ document.getElementById('enlace-inicio').addEventListener('click', function(e) {
   e.preventDefault();
   document.getElementById('inicio').style.display = 'block';
 });
+document.addEventListener("DOMContentLoaded", function () {
+  // Selecciona todos los enlaces del menú
+  const enlaces = document.querySelectorAll(".sidebar ul li a");
+  const secciones = document.querySelectorAll(".seccion");
+
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Ocultar todas las secciones
+      secciones.forEach(sec => sec.style.display = "none");
+
+      // Mostrar solo la sección seleccionada
+      const idSeccion = this.getAttribute("id").replace("enlace-", "");
+      document.getElementById(idSeccion).style.display = "block";
+    });
+  });
+});
