@@ -5,14 +5,14 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   background-color: #cbb89d
   color: #0f2a3d; /* Azul oscuro para el título */
-
+}
 /* Encabezado */
-header 
+header {
   text-align: center;
   padding: 30px 0;
+}
 
-
-header h1 
+header h1{ 
   font-size: 2.5em;
   font-weight: bold;
   margin: 0;
