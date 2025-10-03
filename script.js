@@ -33,14 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const menuBtn = document.querySelector('.menu-btn');
-const sidebar = document.querySelector('.sidebar');
-
-// Toggle del sidebar al hacer clic en el botón
-menuBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
-});
-
 // Cerrar el sidebar si se hace clic fuera
 document.addEventListener('click', (e) => {
   const isClickInsideSidebar = sidebar.contains(e.target);
