@@ -51,11 +51,11 @@ header h1{
   left: -250px; /* Oculta al inicio */
   width: 250px;
   height: 100%;
-  background: #e0c097;
+  background: #f0e7d9;
   padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 1000;
-  color: #f0e7d9;
+  color: white;
 }
 
 .sidebar ul {
