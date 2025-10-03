@@ -37,8 +37,4 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('click', (e) => {
   const isClickInsideSidebar = sidebar.contains(e.target);
   const isClickOnMenuBtn = menuBtn.contains(e.target);
-
-  if (!isClickInsideSidebar && !isClickOnMenuBtn) {
-    sidebar.classList.remove('active');
-  }
 });
