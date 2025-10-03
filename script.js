@@ -1,45 +1,32 @@
-const menuBtn = document.getElementById("menu-btn");
-const sidebar = document.getElementById("sidebar");
-
-menuBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
-});
-// Mostrar la sección de proyectos al hacer clic en el menú
-document.getElementById('enlace-proyectos').addEventListener('click', function(e) {
-  e.preventDefault();
-  document.getElementById('proyectos').style.display = 'block';
-});
-// Mostrar la sección de inicio al hacer clic en el menú
-document.getElementById('enlace-inicio').addEventListener('click', function(e) {
-  e.preventDefault();
-  document.getElementById('inicio').style.display = 'block';
-});
-document.addEventListener("DOMContentLoaded", function () {
-  // Selecciona todos los enlaces del menú
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menu-btn");
+  const sidebar = document.getElementById("sidebar");
   const enlaces = document.querySelectorAll(".sidebar ul li a");
   const secciones = document.querySelectorAll(".seccion");
 
+  // Abrir/cerrar sidebar al clicar en el botón
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // evita que el clic se propague y cierre el menú
+    sidebar.classList.toggle("active");
+  });
+
+  // Cambiar entre secciones al hacer clic en los enlaces
   enlaces.forEach(enlace => {
-    enlace.addEventListener("click", function (e) {
+    enlace.addEventListener("click", (e) => {
       e.preventDefault();
+      const idSeccion = enlace.id.replace("enlace-", "");
 
-      // Ocultar todas las secciones
       secciones.forEach(sec => sec.style.display = "none");
-
-      // Mostrar solo la sección seleccionada
-      const idSeccion = this.getAttribute("id").replace("enlace-", "");
       document.getElementById(idSeccion).style.display = "block";
+
+      sidebar.classList.remove("active"); // cerrar sidebar al seleccionar
     });
   });
+
+  // Cerrar sidebar al clicar fuera
+  document.addEventListener("click", (e) => {
+    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      sidebar.classList.remove("active");
+    }
+  });
 });
-
-// Cerrar el sidebar si se hace clic fuera
-document.addEventListener('click', (e) => {
-  const isClickInsideSidebar = sidebar.contains(e.target);
-  const isClickOnMenuBtn = menuBtn.contains(e.target);
-
-  if (!isClickInsideSidebar && !isClickOnMenuBtn) {
-    sidebar.classList.remove('active');
-  }
-});
-
