@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #cbb89d;
+  background-color: #f0e7d9;
   color: #0f2a3d; /* Azul oscuro para el título */
 }
 
@@ -55,7 +55,7 @@ header h1{
   padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 1000;
-  color: white;
+  color: #f0e7d9;
 }
 
 .sidebar ul {
